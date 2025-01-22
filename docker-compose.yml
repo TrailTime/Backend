@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        IMAGE_TAG: ${IMAGE_TAG}
+    image: project2:${IMAGE_TAG}
+    networks:
+      - app-network
